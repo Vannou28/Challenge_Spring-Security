@@ -1,16 +1,26 @@
 package com.vannou.security.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.servlet.view.RedirectView;
+import org.springframework.web.bind.annotation.RestController;
 
 
-@Controller
+@RestController
 public class adminController {
 
     @GetMapping("/secret-bases")
-    public RedirectView  admin() {
-        return new RedirectView("https://www.wildcodeschool.com/fr-FR");
+    public String []  admin() {
+        String [] citiesWild = {"Biarritz",
+        "Bordeaux",
+        "La Loupe",
+        "Lille",
+        "Lyon",
+        "Nantes",
+        "Orléans",
+        "Paris",
+        "Reims",
+        "Strasbourg",
+        "Toulouse"};
+        return citiesWild ;
     }
 
 }
